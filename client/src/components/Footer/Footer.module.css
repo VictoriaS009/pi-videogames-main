@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    justify-content:space-between;
+    padding-right: 5%;
+    padding-left: 5%;
+  
+}
+
+.henry{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+.message{
+    align-self: center;
+}
+
+
+.redes{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.anchor{
+    display: flex;
+    align-items: center;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.red{
+    display: flex;
+    height: 80%;
+}

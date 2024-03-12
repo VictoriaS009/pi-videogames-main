@@ -1,0 +1,60 @@
+#container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#genreContainer {
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+}
+
+.title{
+    height: 25%;
+}
+
+#listSelection {
+    height: 25%;
+    width: 99%;
+    border-radius: 5px;
+}
+
+.genresOpt{
+    width: 100%;
+}
+
+#filterOptBox{
+    display: flex;
+    height: 60%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 75%;
+}
+
+.genresSelNames{
+    width: auto;
+    height: 25%;
+    padding: 1%;
+}
+
+#sourceContainer {
+    display: flex;
+    flex-direction: column;
+    height: 35%;
+
+}
+
+

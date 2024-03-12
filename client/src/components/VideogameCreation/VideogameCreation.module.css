@@ -1,0 +1,138 @@
+#containerPpal {
+    display: flex;
+    flex-direction: column;
+    height: 99vh;
+    background-color: gray;
+}
+
+/* La página estará dividida en 3 partes*/
+#containerHeader{
+    background-color:black ;
+    color: cornsilk;
+    display: flex;
+    width: 98%;
+    height: 10%;
+    padding-left: 1%;
+    padding-right: 1%;
+    align-items: center;
+}
+
+#containerCuerpoPpal{
+    display: flex;
+    width: 100%;
+    height: 85%;
+    border: 1px solid whitesmoke;
+    justify-content: start;
+
+}
+
+#containerFooter{
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    width: 100%;
+    height: 5%;
+    border: 1px solid whitesmoke
+
+}
+
+
+/* Estilos del container header*/
+#addGame{
+    width: 25%;
+}
+
+#title{
+    width: 50%;
+}
+
+#searchbar{
+    display: flex;
+    width: 25%;
+}
+
+#boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 125%;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Formulario*/
+.campos{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    background-color: burlywood;
+    align-self: center;
+    justify-content: space-around;
+}
+
+.imageContainer{
+    width: 50%;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.formContainer{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.image{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.formu{
+    display: flex;
+    height: 100%;
+    background-color: gray;
+    justify-content: center;
+}
+
+.label{
+    font-weight: bold;
+}
+
+#boton{
+    width: 50%;
+    align-self: center;
+    justify-self: flex-end;
+    padding: 2px;
+    color: burlywood;
+    background-color: black;
+    font-weight: bold;
+}
+
+.navLink {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}    
+
+.inputTitle{
+    width: 35vw;
+    height: 5vh;
+    align-self: center;
+}
+
+.inputRating{
+    width: 35vw;
+    height: 5vh;
+    align-self: center;
+}
+
+.inputDescription{
+    width: 35vw;
+    height: 10vh;
+    align-self: center;
+}

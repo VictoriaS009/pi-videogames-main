@@ -1,0 +1,20 @@
+
+.home {
+    width: 100vw;
+    height: 100vh;    
+    /* background-image: url("../../images/backimg.jpg"); */
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeButton {
+    width: 30vw;
+    height: 10vh;
+    color: white;
+    background-color: black;
+    font-weight: 700;
+    font-size: large;
+    border-radius: 10px;
+}

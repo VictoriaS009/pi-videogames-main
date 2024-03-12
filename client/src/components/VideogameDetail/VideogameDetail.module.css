@@ -1,0 +1,126 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    height: 99vh;
+    background-color: gray;
+}
+
+#containerHeader{
+    background-color:black ;
+    color: cornsilk;
+    display: flex;
+    width: 98%;
+    height: 10%;
+    padding-left: 1%;
+    padding-right: 1%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos del container header*/
+#addGame{
+    width: 25%;
+}
+
+#title{
+    width: 50%;
+}
+
+#searchbar{
+    display: flex;
+    width: 27%;
+}
+
+#boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 125%;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Estilos del cuerpo*/
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55%;
+    width: 98%;
+    padding: 1%;
+    background-color: gainsboro;
+    }
+
+
+.containerImagen{
+    width: 50%;
+    height: 100%;
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.image {
+    /* width: 95%; */
+    display: flex;
+    height: 95%;
+    justify-content: center;
+    align-items:flex-end;
+    padding: 2px
+}
+
+.data {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+.details{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: larger;
+}
+
+.titles{
+    width: 20%;
+    display: flex;
+    background-color: black;
+    color: whitesmoke;
+    padding-left: 2%;
+}
+
+.datos{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    font-weight: bold;
+    /* height: 20%; */
+    background-color: gray;
+}
+
+.description {
+    height: 35%;
+    color: black;
+    background-color: gray;
+    font-weight: bold;
+    font-size: 80%;
+}
+
+.titleDescription{
+    background-color: black;
+    color: whitesmoke;
+    font-size: 150%;
+    margin:0
+}
+
+.navLink {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}   
