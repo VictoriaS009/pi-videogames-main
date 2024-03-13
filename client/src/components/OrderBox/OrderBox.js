@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { orderAlphabetical, orderRating } from "../../store/actions";
 import styles from "./OrderBox.module.css"

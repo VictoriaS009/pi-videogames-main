@@ -1,8 +1,8 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import {  useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
-import { getVideogames } from "../../store/actions";
+
 
 import SearchBar from "../SearchBar/index.js";
 import styles from "../Home/Home.module.css"

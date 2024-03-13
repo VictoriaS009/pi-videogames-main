@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from 'react-router-dom';
 import { getInfo, getVideogames } from "../../store/actions";
@@ -10,11 +10,11 @@ const LandingPage = (props) =>  {
     
     useEffect(()=> 
     dispatch(getInfo()),
-    [])
+    )
 
     useEffect(()=> 
     dispatch(getVideogames()),
-    [])
+    )
 
     return (
       <div className={styles.home} id={styles.contain}>

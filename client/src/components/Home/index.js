@@ -4,12 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getVideogames } from "../../store/actions";
 
-import SearchBar from "../SearchBar/index";
+import SearchBar from "../SearchBar/index.js";
 import styles from "./Home.module.css";
 
 import PagingBox from "../PagingBox";
 import FilterBox from "../FilterBox";
-import OrderBox from "../OrderBox/OrderBox";
+import OrderBox from "../OrderBox/OrderBox.js";
 import Footer from "../Footer/index.js";
 import Loading from "../Loading/index.js";
 import VideogameNotFinded from "../VideogameNoEncontrado/index.js";
@@ -22,9 +22,9 @@ const Home = (props) => {
   const videogamesLoaded = useSelector((store) => store.gamesLoaded);
 
   let videogames = undefined;
-
+console.log(window)
   //Según exista o no un search activo, los videogames a mostrar serán los iniciales o los de la búsqueda.
-  if (window.location.search.includes("name")) {
+  if (window.location.search?.includes("name")) {
     videogames = videogamesSearched;
   } else {
     videogames = videogamesLoaded;
@@ -33,10 +33,10 @@ const Home = (props) => {
   //Filtro de genero
   const genre = useSelector((store) => store.filteredGenres);
 
-  if (genre.length > 0) {
+  if (genre?.length > 0) {
     var filtGamesGenre = [];
     videogames.forEach((g) => {
-      for (let i = 0; i < genre.length; i++) {
+      for (let i = 0; i < genre?.length; i++) {
         if (g.genres && g.genres.includes(genre[i])) {
           filtGamesGenre.push(g);
         }
@@ -50,17 +50,17 @@ const Home = (props) => {
 
   //Filtro de source
   const source = useSelector((store) => store.filteredSources);
-  if (source.length > 0) {
+  if (source?.length > 0) {
     var filtGamesSource = [];
     videogames.forEach((g) => {
-      for (let i = 0; i <= source.length - 1; i++) {
+      for (let i = 0; i <= source?.length - 1; i++) {
         if (g.source && g.source === source[i]) {
           filtGamesSource.push(g);
         }
       }
     });
 
-    if (filtGamesSource.length > 0) {
+    if (filtGamesSource?.length > 0) {
       videogames = filtGamesSource;
     } else {
       videogames = [{ name: "Videogames no encontrados" }];
@@ -136,7 +136,7 @@ const Home = (props) => {
 
   //Paginado
   const videogamesPerPage = 9;
-  const pagesQty = Math.ceil(videogames.length / videogamesPerPage);
+  const pagesQty = Math.ceil(videogames?.length / videogamesPerPage);
   const [actualPage, setActualPage] = useState(1);
   const setPage = (value) => setActualPage(value);
   const endIndex = videogamesPerPage * actualPage;
@@ -146,7 +146,7 @@ const Home = (props) => {
 
   return (
     <div>
-      {videogames.length === 0 ? (
+      {videogames?.length === 0 ? (
         <Loading data-testid="loadingComponent"></Loading>
       ) : (
         <div id={styles.containerPpal}>
@@ -180,11 +180,11 @@ const Home = (props) => {
               </div>
 
               <div id={styles.videogamesBox}>
-                {videogames[0].name === "Videogames no encontrados" ? (
+                {videogames[0]?.name === "Videogames no encontrados" ? (
                   <VideogameNotFinded />
                 ) : (
                   <div id={styles.cardsContainer}>
-                    {videogames.length > 0 ? (
+                    {videogames?.length > 0 ? (
                       <div className={styles.cards}>
                         {videogames &&
                           videogames.slice(initIndex, endIndex).map((games) => (

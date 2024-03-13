@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Routes>
       <Route path="/" element={<LandingPage/>}/>
-      <Route path="/videogames" render={({location})=> <Home location={location}/>}/>
+      <Route path="/videogames"  element={<Home />}/>
       <Route path="/videogames/:id" render={({match})=> <VideogameDetail match={match}/>}/>
       <Route path="/videogame" element={<VideogameCreation/>} /> 
       </Routes>

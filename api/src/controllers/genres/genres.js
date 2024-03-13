@@ -32,7 +32,6 @@ async function getGenres(req, res, next) {
 }
 
 
-//Acá estuve probando la posibilidad de agregar géneros; queda por las dudas pero no está siendo utlizada.
 function addGenre(req, res, next) {
   const genre = req.body;
   console.log(genre);

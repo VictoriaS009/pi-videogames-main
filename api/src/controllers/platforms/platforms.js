@@ -1,8 +1,6 @@
 const { initialGetVideogames } = require("./../videogames/getVideogames/initialVideogames");
 
 async function getPlatforms(req, res, next) {
-
-    //Reutilizo la consulta de videogames e itero sobre el resultado para armar el array de platforms.
     const results = await initialGetVideogames();
     const platforms = []
 
