@@ -8,9 +8,10 @@ import Footer from "../Footer/index.js";
 // import image from "../../images/videogame.png";
 
 
-const VideogameCreation = (props) => {
+const VideoGameCreation = (props) => {
   const genresOpt = useSelector((store) => store.genres);
   const platformsOpt = useSelector((store) => store.platforms);
+  console.log(Image)
 
   const dispatch = useDispatch();
 
@@ -23,7 +24,7 @@ const VideogameCreation = (props) => {
     genres: "",
   });
 
-
+console.log(state);
   const handleChange = (event) => {
     setState({ ...state, [event.target.id]: event.target.value });
   };
@@ -244,4 +245,4 @@ const VideogameCreation = (props) => {
   );
 };
 
-export default VideogameCreation;
+export default VideoGameCreation;

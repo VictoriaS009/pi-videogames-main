@@ -2,10 +2,11 @@ import './App.css';
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import LandingPage from "./components/LandingPage";
-import Home from "./components/Home";
+import LandingPage from "./components/LandingPage/LandingPage";
+import Home from "./components/Home/Home";
+import VideoGameCreation from './components/VideogameCreation/VideogameCreation';
 import VideogameDetail from "./components/VideogameDetail";
-import VideogameCreation from "./components/VideogameCreation";
+
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
       <Routes>
       <Route path="/" element={<LandingPage/>}/>
       <Route path="/videogames"  element={<Home />}/>
-      <Route path="/videogames/:id" render={({match})=> <VideogameDetail match={match}/>}/>
-      <Route path="/videogame" element={<VideogameCreation/>} /> 
+      <Route path="/videogames/:id" element={ <VideogameDetail/>}/>
+      <Route path="/videogamecreation" element={<VideoGameCreation/>} />
       </Routes>
     </div>
   );
