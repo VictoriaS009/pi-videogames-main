@@ -14,7 +14,7 @@ const initialGetVideogames = async () => {
     videogamesPpal.push({
       name: g.dataValues.name,
       genres: g.dataValues.genres.map((genre) => genre.name),
-      image:`https://api.rawg.io/api/games?key=ee8b7cccfb09478f97850a5476f9b161`,
+      image: g?.dataValues?.image,
       rating: g.dataValues.rating,
       platforms: g.dataValues.platforms,
       id: g.dataValues.id,

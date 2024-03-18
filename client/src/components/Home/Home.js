@@ -153,9 +153,9 @@ console.log(window)
           {/* Cabecera*/}
           <div id={styles.containerHeader}>
             <div id={styles.addGame}>
-              <Link to={`/videogame`} className={styles.navLink}>
+              <a href={`/videogame`} className={styles.navLink}>
                 <button id={styles.boton}>Add a Videogame!</button>
-              </Link>
+              </a>
             </div>
             <div id={styles.title}>
               <Link to={`/videogames`} className={styles.navLink}>

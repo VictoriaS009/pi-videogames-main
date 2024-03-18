@@ -10,7 +10,6 @@ async function getInfo(req, res, next) {
     const platforms= await getPlatforms();
 
     const genre = await Genre.findAll();
-
     return res.json({
       platforms,
       genre,

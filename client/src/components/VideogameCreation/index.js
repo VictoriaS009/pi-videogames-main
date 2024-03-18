@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import SearchBar from "../SearchBar";
 import styles from "./VideogameCreation.module.css";
-import { addVideogame } from "../../store/actions";
+import { addVideogame, getInfo } from "../../store/actions";
 import Footer from "../Footer/index.js";
-// import image from "../../images/videogame.png";
+import image from "../../images/videogame.png";
 
 
-const VideoGameCreation = (props) => {
+const VideogameCreation = (props) => {
+    const dispatch = useDispatch();
+    useEffect(() => dispatch(getInfo()),[]);
   const genresOpt = useSelector((store) => store.genres);
   const platformsOpt = useSelector((store) => store.platforms);
-  console.log(Image)
-
-  const dispatch = useDispatch();
+console.log(genresOpt, platformsOpt)
 
   const [state, setState] = useState({
     name: "",
@@ -24,7 +23,7 @@ const VideoGameCreation = (props) => {
     genres: "",
   });
 
-console.log(state);
+
   const handleChange = (event) => {
     setState({ ...state, [event.target.id]: event.target.value });
   };
@@ -93,25 +92,22 @@ console.log(state);
       {/* Cabecera*/}
       <div id={styles.containerHeader}>
         <div id={styles.addGame}>
-          <Link to={`/videogames`} className={styles.navLink}>
+          <a href={`/videogames`} className={styles.navLink}>
             <button id={styles.boton}>Home</button>
-          </Link>
+          </a>
         </div>
         <div id={styles.title}>
         <Link to={`/videogames`} className={styles.navLink}>
           <h1>Videogames!</h1>
           </Link>
         </div>
-        <div id={styles.searchbar}>
-          <SearchBar />
-        </div>
       </div>
 
       {/* Formulario */}
       <div id={styles.containerCuerpoPpal}>
-        {/* <div className={styles.imageContainer}>
+        <div className={styles.imageContainer}>
           <img className={styles.image} src={image} alt="alternatetext" />
-        </div> */}
+        </div>
         <div className={styles.formContainer}>
           <form className={styles.formu} onSubmit={(e) => handleSubmit(e)}>
             <div className={styles.campos}>
@@ -245,4 +241,4 @@ console.log(state);
   );
 };
 
-export default VideoGameCreation;
+export default VideogameCreation;

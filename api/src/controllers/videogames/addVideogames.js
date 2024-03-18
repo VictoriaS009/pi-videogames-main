@@ -8,6 +8,8 @@ async function addVideogame(req,res,next){
     console.log(videogame)
 
     const genres = videogame.genres.slice(0,-1).split(",")
+    const platforms = videogame.platforms.slice(0,-1).split(",")
+
 
     if(!videogame) return res.sendStatus({
         error : 500,
@@ -23,7 +25,7 @@ async function addVideogame(req,res,next){
                     description: videogame.description,
                     released: videogame.released,
                     rating: videogame.rating,
-                    platforms: videogame.platforms.slice(0,-1)
+                    platforms
                 }});
         
         genres.forEach(async (G)=>{
